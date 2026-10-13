@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Ingresa tu alarma</label><br>
+    <input type="number" id="tiempo">
+    <button onclick="Alarma()">Alarma</button>
+    <h1 id="texto" style="color:aqua;">ALARMA APAGADA</h1>
+    <audio id="sonido"></audio>
+
+    <script>
+        let elementoTiempo = document.getElementById("tiempo").value
+        let elementoTiempo = document.getElementById("texto")
+        let elementoTiempo = document.getElementById("sonido")
+
+        function Alarma(){
+            setTimeout(comenzarAlarma, 1000 * elementoTiempo)
+        }
+
+        function comenzarAlarma(){
+            elementoTexto.textContent = "ALARMA ENCENDIDA"
+            elementoTexto.style.color = "red"
+            elemnetoSonido.play()
+        }
+    </script>
+</body>
+</html>
